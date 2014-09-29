@@ -58,7 +58,14 @@ nav a {
 
 /* Footer Style */
 
-.footer {
+.footer-left ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1em;
+}
+
+.footer p {
   color: gray;
   text-align: center;
 }

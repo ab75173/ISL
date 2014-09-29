@@ -12,7 +12,6 @@
   <body>
     <div class="header">
       <h1><?php bloginfo( 'name' ); ?></h1>
-      <h2><?php bloginfo( 'description' ); ?></h2>
     </div>
     <div>
       <hr>

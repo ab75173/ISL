@@ -25,4 +25,27 @@ add_action( 'wp_enqueue_scripts', 'theme_styles' );
 
 add_theme_support( 'menus' );
 
+// Registe Sidebar Widgets
+
+function create_widget( $name, $id, $description) {
+  $args = array(
+    'name'          => __( $name ),
+    'id'            => $id,
+    'description'   => $description,
+    'before_widget' => '',
+    'after_widget'  => '</li>',
+    'before_title'  => '<h2 class="widgettitle">',
+    'after_title'   => '</h2>'
+  );
+
+  register_sidebar( $args );
+
+}
+
+create_widget( 'About Left', 'about_left', 'Displays the left column of the about page');
+create_widget( 'About Right', 'about_right', 'Displays the right column of the about page');
+create_widget( 'Left Footer', 'footer_left', 'Displays in the left area of the footer');
+create_widget( 'Middle Footer', 'footer_middle', 'Displays in the middle area of the footer');
+create_widget( 'Right Footer', 'footer_right', 'Displays in the right area of the footer');
+
 ?>
